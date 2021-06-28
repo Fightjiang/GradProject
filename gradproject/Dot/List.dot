@@ -1,0 +1,13 @@
+digraph List {
+	 rankdir = LR
+	 Tag[label = "L" ,shape=none,width=0, height=0,margin=0]
+	 node [shape = record,tailclip = false]
+	 label0[label = "{ <data> | <ref>  }",style=filled]
+	 label1[label = "{ <data> 1| <ref>  }"]
+	 label2[label = "{ <data> 2| <ref>  }"]
+	 label3[label = "{ <data> 3 | ^ }"]
+	 Tag->label0:data
+	 label0:ref:c -> label1:data [tailclip=false]
+	 label1:ref:c -> label2:data [tailclip=false]
+	 label2:ref:c -> label3:data [tailclip=false]
+}
